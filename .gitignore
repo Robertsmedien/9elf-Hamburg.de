@@ -1,3 +1,9 @@
 .DS_Store
 *.mov
 Thumbs.db
+_rohbilder/
+_rohbilder:galerie:
+_rohbilder:magazin:
+_rohbilder:team:
+_rohbilder:shop:
+_rohbilder:fahrzeuge:
