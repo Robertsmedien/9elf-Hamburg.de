@@ -1,0 +1,103 @@
+{
+  "mitglieder": [
+    {
+      "id": 1,
+      "name": "Dennis Neumann",
+      "rolle_de": "Gründer & Geschäftsführer",
+      "rolle_en": "Founder & Managing Director",
+      "bio_de": "Über 25 Jahre Porsche Erfahrung im Niederlassungsbetrieb. Dein persönlicher Ansprechpartner rund um alle Porsche Modelle und die damit verbundene Technik.",
+      "bio_en": "Over 25 years of Porsche experience in dealership operations. Your personal contact for all Porsche models and the associated technology.",
+      "foto": "images/team/dennis-neumann.webp",
+      "foto_alt": "Dennis Neumann, Gründer & Geschäftsführer",
+      "initialen": ""
+    },
+    {
+      "id": 2,
+      "name": "Andreas Irmler",
+      "rolle_de": "Kfz-Meister & Fahrzeugverkauf",
+      "rolle_en": "Master Mechanic & Vehicle Sales",
+      "bio_de": "Als Werkstattleiter das Herzstück unserer Werkstatt. Koordiniert den täglichen Betrieb und steht Mitarbeitern und Kunden mit Fachwissen zur Seite.",
+      "bio_en": "As workshop manager, the heart of our workshop. Coordinates daily operations and supports staff and customers with expertise.",
+      "foto": "images/team/andreas-irmler.webp",
+      "foto_alt": "Andreas Irmler, Kfz-Meister & Fahrzeugverkauf",
+      "initialen": ""
+    },
+    {
+      "id": 3,
+      "name": "Jörg Kassel",
+      "rolle_de": "Kfz-Meister & Werkstatt",
+      "rolle_en": "Master Mechanic & Workshop",
+      "bio_de": "Seit Kindheit im Automobilbereich verwurzelt. Seine Leidenschaft gilt dem Motorsport und der Feinabstimmung von Fahrwerken für Straße und Rennstrecke.",
+      "bio_en": "Rooted in the automotive field since childhood. His passion is motorsport and fine-tuning suspensions for road and track.",
+      "foto": "images/team/joerg-kassel.webp",
+      "foto_alt": "Jörg Kassel, Kfz-Meister & Werkstatt",
+      "initialen": ""
+    },
+    {
+      "id": 4,
+      "name": "Knud Kamecke",
+      "rolle_de": "Kfz-Mechaniker & Werkstatt",
+      "rolle_en": "Mechanic & Workshop",
+      "bio_de": "Seit der Gründung an Bord und der Motor unseres Teams. Erfahrener Kfz-Mechaniker mit speziellem Know-How für sämtliche Fahrzeugtypen.",
+      "bio_en": "On board since the founding and the engine of our team. Experienced mechanic with special know-how for all vehicle types.",
+      "foto": "images/team/knud-kamecke.webp",
+      "foto_alt": "Knud Kamecke, Kfz-Mechaniker & Werkstatt",
+      "initialen": ""
+    },
+    {
+      "id": 5,
+      "name": "Lucas Falke",
+      "rolle_de": "Kfz-Mechatroniker",
+      "rolle_en": "Automotive Mechatronics Technician",
+      "bio_de": "Die Geschichte zu Lucas folgt in Kürze.",
+      "bio_en": "Lucas's story follows shortly.",
+      "foto": "",
+      "foto_alt": "",
+      "initialen": "LF"
+    },
+    {
+      "id": 6,
+      "name": "Dirk Dressler",
+      "rolle_de": "Fahrzeugverkauf",
+      "rolle_en": "Vehicle Sales",
+      "bio_de": "Mit jahrzehntelanger Porsche-Erfahrung ist Dirk der richtige Ansprechpartner, wenn es um Sportwagen mit Geschichte und Charakter geht. Als langjähriger Porsche-Besitzer und Motorsport-Enthusiast verbindet er Fachwissen mit echter Leidenschaft und berät Kunden mit viel Gespür und Erfahrung.",
+      "bio_en": "With decades of Porsche experience, Dirk is the right contact when it comes to sports cars with history and character. As a longtime Porsche owner and motorsport enthusiast, he combines expertise with genuine passion and advises customers with great instinct and experience.",
+      "foto": "",
+      "foto_alt": "",
+      "initialen": "DD"
+    },
+    {
+      "id": 7,
+      "name": "Merten Buuck",
+      "rolle_de": "Auszubildender",
+      "rolle_en": "Apprentice",
+      "bio_de": "Bereits fortgeschrittener Auszubildender, familiär mit der Marke Porsche verbunden. Packt tatkräftig im täglichen Werkstattprozess mit an.",
+      "bio_en": "An advanced apprentice, connected to the Porsche brand through family. Actively lends a hand in the daily workshop process.",
+      "foto": "images/team/merten-buuck.webp",
+      "foto_alt": "Merten Buuck, Auszubildender",
+      "initialen": ""
+    },
+    {
+      "id": 8,
+      "name": "Gabriele Degner",
+      "rolle_de": "Backoffice",
+      "rolle_en": "Back Office",
+      "bio_de": "Das unverzichtbare Herzstück des Backoffices. Hält mit organisatorischem Geschick alle Fäden im Hintergrund zusammen.",
+      "bio_en": "The indispensable heart of the back office. Keeps everything together behind the scenes with organizational skill.",
+      "foto": "images/team/gabriele-degner.webp",
+      "foto_alt": "Gabriele Degner, Backoffice",
+      "initialen": ""
+    },
+    {
+      "id": 9,
+      "name": "Tom Kaster",
+      "rolle_de": "Auszubildender",
+      "rolle_en": "Apprentice",
+      "bio_de": "Lernt bei 9elf das Handwerk von Grund auf — umgeben von echten Porsche und einem Team mit jahrelanger Erfahrung.",
+      "bio_en": "Learning the trade from the ground up at 9elf — surrounded by real Porsche and a team with years of experience.",
+      "foto": "images/team/tom-kaster.webp",
+      "foto_alt": "Tom Kaster, Auszubildender",
+      "initialen": ""
+    }
+  ]
+}

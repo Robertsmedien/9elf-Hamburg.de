@@ -1,0 +1,208 @@
+# =============================================================================
+# 9elf Hamburg — Decap CMS Konfiguration
+# -----------------------------------------------------------------------------
+# Login über GitHub, schreibt direkt ins Repo (Branch main).
+# Der Login braucht einen kleinen OAuth-Vermittler (siehe Anleitung / Phase 4).
+# >>> base_url unten auf DEINE Cloudflare-Worker-Adresse ändern! <<<
+# =============================================================================
+
+backend:
+  name: github
+  repo: Robertsmedien/9elf-Hamburg.de
+  branch: main
+  # Adresse des OAuth-Workers (ohne Slash am Ende). Beispiel:
+  # base_url: https://9elf-oauth.deinname.workers.dev
+  base_url: https://DEIN-OAUTH-WORKER.workers.dev
+  auth_endpoint: auth
+  commit_messages:
+    create: "CMS: {{collection}} „{{slug}}“ angelegt"
+    update: "CMS: {{collection}} „{{slug}}“ aktualisiert"
+    delete: "CMS: {{collection}} „{{slug}}“ gelöscht"
+    uploadMedia: "CMS: Medien hochgeladen – {{path}}"
+    deleteMedia: "CMS: Medien gelöscht – {{path}}"
+
+# Ermöglicht lokales Testen mit `npx decap-server` (siehe Anleitung).
+local_backend: true
+
+# Sprache der CMS-Oberfläche
+locale: de
+
+site_url: https://www.9elf-hamburg.de
+display_url: https://www.9elf-hamburg.de
+
+# Fallback-Medienordner (einzelne Sammlungen überschreiben das unten)
+media_folder: "images"
+public_folder: "images"
+
+collections:
+  # ---------------------------------------------------------------------------
+  - name: magazin
+    label: "Magazin"
+    description: "Beiträge fürs Magazin. Erscheinen auf magazin.html und (die neuesten 3) auf der Startseite."
+    files:
+      - name: beitraege
+        label: "Magazin-Beiträge"
+        file: "data/magazin.json"
+        media_folder: "/images/magazin"
+        public_folder: "images/magazin"
+        fields:
+          - name: beitraege
+            label: "Beiträge"
+            label_singular: "Beitrag"
+            widget: list
+            summary: "{{fields.titel_de}}"
+            fields:
+              - { name: id, label: "ID (intern, kann leer bleiben)", widget: number, required: false, value_type: int }
+              - { name: slug, label: "Slug (URL-Kürzel)", widget: string, required: false }
+              - { name: featured, label: "Als großen Beitrag oben anzeigen (Featured)", widget: boolean, default: false }
+              - { name: titel_de, label: "Titel (DE)", widget: string }
+              - { name: titel_en, label: "Titel (EN)", widget: string }
+              - { name: kategorie_de, label: "Kategorie (DE)", widget: string, hint: "z.B. Projekt, Technik, Service, Event, Tuning" }
+              - { name: kategorie_en, label: "Kategorie (EN)", widget: string }
+              - { name: datum, label: "Datum (Anzeigetext)", widget: string, hint: "z.B. „15. Juni 2026“" }
+              - { name: lesezeit, label: "Lesezeit", widget: string, required: false, hint: "z.B. „6 Min“ – nur beim Featured-Beitrag sichtbar" }
+              - { name: excerpt_de, label: "Kurztext / Teaser (DE)", widget: text }
+              - { name: excerpt_en, label: "Kurztext / Teaser (EN)", widget: text }
+              - { name: bild, label: "Bild", widget: image, choose_url: false }
+              - { name: bild_alt, label: "Bild-Alternativtext (SEO)", widget: string, required: false }
+              - { name: inhalt_de, label: "Volltext (DE)", widget: markdown, required: false }
+              - { name: inhalt_en, label: "Volltext (EN)", widget: markdown, required: false }
+
+  # ---------------------------------------------------------------------------
+  - name: galerie
+    label: "Galerie"
+    description: "Werkstatt-Bilder. Erscheinen auf galerie.html und (die ersten 5) auf der Startseite."
+    files:
+      - name: bilder
+        label: "Galerie-Bilder"
+        file: "data/galerie.json"
+        media_folder: "/images/galerie"
+        public_folder: "images/galerie"
+        fields:
+          - name: bilder
+            label: "Bilder"
+            label_singular: "Bild"
+            widget: list
+            summary: "{{fields.titel_de}} ({{fields.kategorie_de}})"
+            fields:
+              - { name: id, label: "ID (intern, kann leer bleiben)", widget: number, required: false, value_type: int }
+              - { name: titel_de, label: "Titel (DE)", widget: string }
+              - { name: titel_en, label: "Titel (EN)", widget: string }
+              - name: kategorie_de
+                label: "Kategorie (DE)"
+                widget: select
+                options: ["Motor", "Motorarbeit", "Detail", "Werkstatt", "Prüfstand"]
+                hint: "Steuert den Galerie-Filter – bitte eine dieser Kategorien verwenden."
+              - name: kategorie_en
+                label: "Kategorie (EN)"
+                widget: select
+                options: ["Engine", "Engine Work", "Detail", "Workshop", "Dyno"]
+              - { name: bild, label: "Bild", widget: image, choose_url: false }
+              - { name: bild_alt, label: "Bild-Alternativtext (SEO)", widget: string, required: false }
+              - { name: hoehe, label: "Kachelhöhe in Pixeln (Layout)", widget: number, value_type: int, default: 340, hint: "z.B. 320 – bestimmt die Höhe der Kachel in der Galerie." }
+
+  # ---------------------------------------------------------------------------
+  - name: team
+    label: "Team"
+    description: "Team-Mitglieder auf team.html."
+    files:
+      - name: mitglieder
+        label: "Team-Mitglieder"
+        file: "data/team.json"
+        media_folder: "/images/team"
+        public_folder: "images/team"
+        fields:
+          - name: mitglieder
+            label: "Mitglieder"
+            label_singular: "Mitglied"
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { name: id, label: "ID (intern, kann leer bleiben)", widget: number, required: false, value_type: int }
+              - { name: name, label: "Name", widget: string }
+              - { name: rolle_de, label: "Rolle (DE)", widget: string }
+              - { name: rolle_en, label: "Rolle (EN)", widget: string }
+              - { name: bio_de, label: "Kurzbeschreibung (DE)", widget: text, required: false }
+              - { name: bio_en, label: "Kurzbeschreibung (EN)", widget: text, required: false }
+              - { name: foto, label: "Foto", widget: image, required: false, choose_url: false, hint: "Leer lassen, wenn (noch) kein Foto vorhanden ist – dann werden die Initialen angezeigt." }
+              - { name: foto_alt, label: "Foto-Alternativtext (SEO)", widget: string, required: false }
+              - { name: initialen, label: "Initialen (Platzhalter ohne Foto)", widget: string, required: false, hint: "z.B. „LF“ – wird nur angezeigt, wenn kein Foto gesetzt ist." }
+
+  # ---------------------------------------------------------------------------
+  - name: fahrzeuge
+    label: "Fahrzeuge"
+    description: "Fahrzeug-Vorschau im Bereich „Aktuelle Fahrzeuge“ auf der Startseite."
+    files:
+      - name: fahrzeuge
+        label: "Fahrzeuge"
+        file: "data/fahrzeuge.json"
+        media_folder: "/images/fahrzeuge"
+        public_folder: "images/fahrzeuge"
+        fields:
+          - name: fahrzeuge
+            label: "Fahrzeuge"
+            label_singular: "Fahrzeug"
+            widget: list
+            summary: "{{fields.modell}}"
+            fields:
+              - { name: id, label: "ID (intern, kann leer bleiben)", widget: number, required: false, value_type: int }
+              - { name: modell, label: "Modell", widget: string, hint: "z.B. „911 Carrera 993“" }
+              - { name: eckdaten, label: "Eckdaten", widget: string, hint: "z.B. „1997 · 89.000 km · 285 PS · Schaltgetriebe“" }
+              - { name: preis, label: "Preis", widget: string, hint: "z.B. „auf Anfrage“" }
+              - { name: status_de, label: "Status (DE)", widget: string, hint: "z.B. „Verfügbar“ oder „Reserviert“" }
+              - { name: status_en, label: "Status (EN)", widget: string, hint: "z.B. „Available“ oder „Reserved“" }
+              - name: status_klasse
+                label: "Status-Farbe"
+                widget: select
+                options:
+                  - { label: "Grün (verfügbar)", value: "available" }
+                  - { label: "Gelb (reserviert)", value: "reserved" }
+                default: "available"
+              - { name: bild, label: "Foto", widget: image, required: false, choose_url: false, hint: "Optional. Ohne Foto wird ein neutraler Platzhalter angezeigt." }
+
+  # ---------------------------------------------------------------------------
+  - name: shop
+    label: "Shop"
+    description: "Produkte im Shop (shop.html)."
+    files:
+      - name: produkte
+        label: "Shop-Produkte"
+        file: "data/shop.json"
+        media_folder: "/images/shop"
+        public_folder: "images/shop"
+        fields:
+          - name: produkte
+            label: "Produkte"
+            label_singular: "Produkt"
+            widget: list
+            summary: "{{fields.titel_de}}"
+            fields:
+              - { name: id, label: "ID (intern, kann leer bleiben)", widget: number, required: false, value_type: int }
+              - { name: titel_de, label: "Titel (DE)", widget: string }
+              - { name: titel_en, label: "Titel (EN)", widget: string }
+              - { name: kategorie, label: "Kategorie", widget: string, hint: "z.B. T-Shirts, Caps, Hoodies, Aufkleber, Modelle, Pins" }
+              - { name: beschreibung_de, label: "Beschreibung (DE)", widget: text }
+              - { name: beschreibung_en, label: "Beschreibung (EN)", widget: text }
+              - { name: preis, label: "Preis", widget: string, hint: "z.B. „34,90 €“" }
+              - { name: status_de, label: "Status/Button (DE)", widget: string, default: "Auf Anfrage" }
+              - { name: status_en, label: "Status/Button (EN)", widget: string, default: "On request" }
+              - { name: emoji, label: "Platzhalter-Emoji (ohne Foto)", widget: string, required: false, hint: "z.B. 🧢 – wird nur angezeigt, wenn kein Foto gesetzt ist." }
+              - { name: bild, label: "Foto", widget: image, required: false, choose_url: false, hint: "Optional. Ohne Foto wird das Emoji angezeigt." }
+
+  # ---------------------------------------------------------------------------
+  - name: einstellungen
+    label: "Einstellungen"
+    description: "Globale Einstellungen der Website."
+    files:
+      - name: allgemein
+        label: "Allgemein"
+        file: "data/settings.json"
+        media_folder: "/"
+        public_folder: ""
+        fields:
+          - name: hero_video
+            label: "Hero-Hintergrundvideo (Startseite)"
+            widget: file
+            media_folder: "/"
+            public_folder: ""
+            hint: "MP4-Datei. Wird als Hintergrundvideo im Kopfbereich der Startseite abgespielt. Möglichst klein halten (Ladezeit)."

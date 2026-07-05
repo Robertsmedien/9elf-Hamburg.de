@@ -1,0 +1,34 @@
+{
+  "fahrzeuge": [
+    {
+      "id": 1,
+      "modell": "911 Carrera 993",
+      "eckdaten": "1997 · 89.000 km · 285 PS · Schaltgetriebe",
+      "preis": "auf Anfrage",
+      "status_de": "Verfügbar",
+      "status_en": "Available",
+      "status_klasse": "available",
+      "bild": ""
+    },
+    {
+      "id": 2,
+      "modell": "964 Carrera 4",
+      "eckdaten": "1991 · 142.000 km · 250 PS · Allrad",
+      "preis": "auf Anfrage",
+      "status_de": "Reserviert",
+      "status_en": "Reserved",
+      "status_klasse": "reserved",
+      "bild": ""
+    },
+    {
+      "id": 3,
+      "modell": "Cayman S 987",
+      "eckdaten": "2009 · 64.000 km · 320 PS · PDK",
+      "preis": "auf Anfrage",
+      "status_de": "Verfügbar",
+      "status_en": "Available",
+      "status_klasse": "available",
+      "bild": ""
+    }
+  ]
+}

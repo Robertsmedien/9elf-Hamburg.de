@@ -1,0 +1,82 @@
+{
+  "produkte": [
+    {
+      "id": 1,
+      "titel_de": "9elf Logo Shirt",
+      "titel_en": "9elf Logo Shirt",
+      "kategorie": "T-Shirts",
+      "beschreibung_de": "100% Bio-Baumwolle, dezenter Print, in Schwarz und Anthrazit.",
+      "beschreibung_en": "100% organic cotton, subtle print, in black and anthracite.",
+      "preis": "34,90 €",
+      "status_de": "Auf Anfrage",
+      "status_en": "On request",
+      "emoji": "🛍️",
+      "bild": ""
+    },
+    {
+      "id": 2,
+      "titel_de": "9elf Cap Schwarz",
+      "titel_en": "9elf Cap Black",
+      "kategorie": "Caps",
+      "beschreibung_de": "Klassische Baseball-Cap mit gesticktem 9elf Schriftzug, verstellbar.",
+      "beschreibung_en": "Classic baseball cap with embroidered 9elf lettering, adjustable.",
+      "preis": "27,90 €",
+      "status_de": "Auf Anfrage",
+      "status_en": "On request",
+      "emoji": "🧢",
+      "bild": ""
+    },
+    {
+      "id": 3,
+      "titel_de": "9elf Werkstatt Hoodie",
+      "titel_en": "9elf Workshop Hoodie",
+      "kategorie": "Hoodies",
+      "beschreibung_de": "Schwerer Fleece-Hoodie, Kängurutasche, dezenter Backprint.",
+      "beschreibung_en": "Heavy fleece hoodie, kangaroo pocket, subtle back print.",
+      "preis": "59,90 €",
+      "status_de": "Auf Anfrage",
+      "status_en": "On request",
+      "emoji": "🧥",
+      "bild": ""
+    },
+    {
+      "id": 4,
+      "titel_de": "9elf Sticker Pack",
+      "titel_en": "9elf Sticker Pack",
+      "kategorie": "Aufkleber",
+      "beschreibung_de": "5 wetterfeste Aufkleber, verschiedene Motive rund um 9elf.",
+      "beschreibung_en": "5 weatherproof stickers, various 9elf motifs.",
+      "preis": "9,90 €",
+      "status_de": "Auf Anfrage",
+      "status_en": "On request",
+      "emoji": "🏷️",
+      "bild": ""
+    },
+    {
+      "id": 5,
+      "titel_de": "Porsche 911 F-Modell 1:18",
+      "titel_en": "Porsche 911 F-Model 1:18",
+      "kategorie": "Modelle",
+      "beschreibung_de": "Detailgetreues Modellauto im Maßstab 1:18, limitierte Auflage.",
+      "beschreibung_en": "Detailed model car in 1:18 scale, limited edition.",
+      "preis": "89,00 €",
+      "status_de": "Auf Anfrage",
+      "status_en": "On request",
+      "emoji": "🏎️",
+      "bild": ""
+    },
+    {
+      "id": 6,
+      "titel_de": "9elf Pin Set",
+      "titel_en": "9elf Pin Set",
+      "kategorie": "Pins",
+      "beschreibung_de": "3 Emaille-Pins im Porsche-Wappen-Stil, auf Kissenkarte.",
+      "beschreibung_en": "3 enamel pins in Porsche crest style, on backing card.",
+      "preis": "14,90 €",
+      "status_de": "Auf Anfrage",
+      "status_en": "On request",
+      "emoji": "📌",
+      "bild": ""
+    }
+  ]
+}
