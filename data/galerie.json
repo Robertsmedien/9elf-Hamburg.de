@@ -1,0 +1,124 @@
+{
+  "bilder": [
+    {
+      "id": 1,
+      "titel_de": "993 Motorraum",
+      "titel_en": "993 Engine Bay",
+      "kategorie_de": "Motor",
+      "kategorie_en": "Engine",
+      "bild": "images/galerie/galerie-01.webp",
+      "hoehe": 320,
+      "bild_alt": "Porsche 993 Motorraum — 9elf Hamburg Werkstatt"
+    },
+    {
+      "id": 2,
+      "titel_de": "F-Modell Zerlegung",
+      "titel_en": "F-Model Disassembly",
+      "kategorie_de": "Motorarbeit",
+      "kategorie_en": "Engine Work",
+      "bild": "images/galerie/galerie-02.webp",
+      "hoehe": 420,
+      "bild_alt": "F-Modell Motor-Zerlegung — 9elf Hamburg"
+    },
+    {
+      "id": 3,
+      "titel_de": "Vergaser-Setup",
+      "titel_en": "Carburetor Setup",
+      "kategorie_de": "Detail",
+      "kategorie_en": "Detail",
+      "bild": "images/galerie/galerie-03.webp",
+      "hoehe": 280,
+      "bild_alt": "Vergaser-Setup Detail — Porsche Werkstatt Hamburg"
+    },
+    {
+      "id": 4,
+      "titel_de": "Hebebühne",
+      "titel_en": "Lift",
+      "kategorie_de": "Werkstatt",
+      "kategorie_en": "Workshop",
+      "bild": "images/galerie/galerie-04.webp",
+      "hoehe": 360,
+      "bild_alt": "Hebebühne Werkstatt — 9elf Hamburg"
+    },
+    {
+      "id": 5,
+      "titel_de": "Leistungsmessung",
+      "titel_en": "Dyno Run",
+      "kategorie_de": "Prüfstand",
+      "kategorie_en": "Dyno",
+      "bild": "images/galerie/galerie-05.webp",
+      "hoehe": 300,
+      "bild_alt": "Leistungsmessung Prüfstand — Porsche Hamburg"
+    },
+    {
+      "id": 6,
+      "titel_de": "964 Triebwerk",
+      "titel_en": "964 Engine",
+      "kategorie_de": "Motor",
+      "kategorie_en": "Engine",
+      "bild": "images/galerie/galerie-06.webp",
+      "hoehe": 400,
+      "bild_alt": "Porsche 964 Triebwerk — 9elf Hamburg"
+    },
+    {
+      "id": 7,
+      "titel_de": "Chromarbeiten",
+      "titel_en": "Chrome Work",
+      "kategorie_de": "Detail",
+      "kategorie_en": "Detail",
+      "bild": "images/galerie/galerie-07.webp",
+      "hoehe": 260,
+      "bild_alt": "Chromarbeiten Detail — Porsche Restaurierung Hamburg"
+    },
+    {
+      "id": 8,
+      "titel_de": "Karosserie 911",
+      "titel_en": "911 Bodywork",
+      "kategorie_de": "Motorarbeit",
+      "kategorie_en": "Engine Work",
+      "bild": "images/galerie/galerie-08.webp",
+      "hoehe": 380,
+      "bild_alt": "Karosserie Motorarbeit — 9elf Hamburg"
+    },
+    {
+      "id": 9,
+      "titel_de": "Unsere Halle",
+      "titel_en": "Our Workshop",
+      "kategorie_de": "Werkstatt",
+      "kategorie_en": "Workshop",
+      "bild": "images/galerie/galerie-09.webp",
+      "hoehe": 340,
+      "bild_alt": "Werkstatthalle — 9elf Hamburg Porsche Spezialist"
+    },
+    {
+      "id": 10,
+      "titel_de": "Innenraum-Refresh",
+      "titel_en": "Interior Refresh",
+      "kategorie_de": "Detail",
+      "kategorie_en": "Detail",
+      "bild": "images/galerie/galerie-10.webp",
+      "hoehe": 300,
+      "bild_alt": "Innenraum-Refresh — Porsche Hamburg"
+    },
+    {
+      "id": 11,
+      "titel_de": "Turbo-Aggregat",
+      "titel_en": "Turbo Unit",
+      "kategorie_de": "Motor",
+      "kategorie_en": "Engine",
+      "bild": "images/galerie/galerie-11.webp",
+      "hoehe": 360,
+      "bild_alt": "Porsche Turbo-Aggregat — 9elf Hamburg"
+    },
+    {
+      "id": 12,
+      "titel_de": "Lackvorbereitung",
+      "titel_en": "Paint Prep",
+      "kategorie_de": "Motorarbeit",
+      "kategorie_en": "Engine Work",
+      "bild": "images/galerie/galerie-12.webp",
+      "hoehe": 420,
+      "bild_alt": "Lackvorbehandlung Motorarbeit — 9elf Hamburg"
+    }
+  ]
+}
